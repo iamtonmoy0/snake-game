@@ -3,6 +3,7 @@
 
 // draw imported
  mod draw;
+ mod snake;
  
  fn main() {
    
