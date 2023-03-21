@@ -51,9 +51,22 @@ impl Snake{
 	Snake { direction:Direction::Right, body, tail: None }
 
 	}
+	pub fn draw(&self,con:&Context,g:&mut G2d){
+	for block in &self.body{
+		draw_block(SNAKE_COLOR,block.x,block.y,con,g)
 
-	
+	}
 }
+
+pub fn head_position(&self)->(i32,i32){
+	let head_block= self.body.front().unwrap();
+	(head_block.x,head_block.y)
+}
+
+}
+
+
+
 
 
 
