@@ -4,6 +4,7 @@
 // draw imported
  mod draw;
  mod snake;
+ mod game;
  
  fn main() {
    
