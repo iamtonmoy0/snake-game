@@ -113,12 +113,10 @@ impl Snake{
             Direction::Right => (head_x + 1, head_y),
         }
     }
-
-    pub fn restore_tail(&mut self) {
+ pub fn restore_tail(&mut self) {
         let blk = self.tail.clone().unwrap();
         self.body.push_back(blk);
     }
-
     pub fn overlap_tail(&self, x: i32, y: i32) -> bool {
         let mut ch = 0;
         for block in &self.body {
